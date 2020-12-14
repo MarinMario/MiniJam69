@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/wind_ambient4.wav-4cefddd617f852e4baad5bf1da696fbb.sample"
+
+[deps]
+
+source_file="res://Sounds/wind_ambient4.wav"
+dest_files=[ "res://.import/wind_ambient4.wav-4cefddd617f852e4baad5bf1da696fbb.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://light.png" type="Texture" id=1]
+
+[node name="Darkness" type="Light2D"]
+position = Vector2( -1.49493, -1.4949 )
+scale = Vector2( 2.08075, 1.52117 )
+texture = ExtResource( 1 )
+energy = 0.5
+mode = 3

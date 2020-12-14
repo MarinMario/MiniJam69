@@ -1,0 +1,76 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Menus/Button.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Menus/InGameMenu.gd" type="Script" id=2]
+
+[sub_resource type="InputEventAction" id=1]
+action = "esc"
+
+[sub_resource type="ShortCut" id=2]
+shortcut = SubResource( 1 )
+
+[node name="InGameMenu" type="Control"]
+pause_mode = 2
+light_mask = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PAUSE" parent="." instance=ExtResource( 1 )]
+margin_left = 1184.0
+margin_top = 16.0
+margin_right = 1264.0
+margin_bottom = 96.0
+shortcut = SubResource( 2 )
+text = "PAUSE"
+
+[node name="Control" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+margin_left = -80.0
+margin_top = -48.0
+margin_right = 1328.0
+margin_bottom = 768.0
+mouse_filter = 2
+color = Color( 0, 0, 0, 0.784314 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FullScreen" parent="Control" instance=ExtResource( 1 )]
+margin_left = 744.0
+margin_top = 320.0
+margin_right = 824.0
+margin_bottom = 400.0
+text = "FULL SCREEN"
+
+[node name="BackToMenu" parent="Control" instance=ExtResource( 1 )]
+margin_left = 648.0
+margin_top = 320.0
+margin_right = 728.0
+margin_bottom = 400.0
+text = "BACK TO MENU"
+
+[node name="Restart" parent="Control" instance=ExtResource( 1 )]
+margin_left = 552.0
+margin_top = 320.0
+margin_right = 632.0
+margin_bottom = 400.0
+text = "RESTART"
+
+[node name="Resume" parent="Control" instance=ExtResource( 1 )]
+margin_left = 456.0
+margin_top = 320.0
+margin_right = 536.0
+margin_bottom = 400.0
+text = "RESUME"
+[connection signal="pressed" from="PAUSE" to="." method="_on_PAUSE_pressed"]
+[connection signal="pressed" from="Control/FullScreen" to="." method="_on_FullScreen_pressed"]
+[connection signal="pressed" from="Control/BackToMenu" to="." method="_on_BackToMenu_pressed"]
+[connection signal="pressed" from="Control/Restart" to="." method="_on_Restart_pressed"]
+[connection signal="pressed" from="Control/Resume" to="." method="_on_Resume_pressed"]

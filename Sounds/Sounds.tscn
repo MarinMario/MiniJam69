@@ -1,0 +1,64 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://Sounds/death_devil.wav" type="AudioStream" id=1]
+[ext_resource path="res://Sounds/intro_music.ogg" type="AudioStream" id=2]
+[ext_resource path="res://Sounds/step.wav" type="AudioStream" id=3]
+[ext_resource path="res://Sounds/die.wav" type="AudioStream" id=4]
+[ext_resource path="res://Sounds/throw_card.wav" type="AudioStream" id=5]
+[ext_resource path="res://Sounds/win.wav" type="AudioStream" id=6]
+[ext_resource path="res://Sounds/Sounds.gd" type="Script" id=7]
+[ext_resource path="res://Sounds/meet_devil.wav" type="AudioStream" id=8]
+[ext_resource path="res://Sounds/wind_ambient1.wav" type="AudioStream" id=9]
+[ext_resource path="res://Sounds/wind.wav" type="AudioStream" id=10]
+[ext_resource path="res://Sounds/wind_ambient3.wav" type="AudioStream" id=11]
+[ext_resource path="res://Sounds/wind_ambient2.wav" type="AudioStream" id=12]
+[ext_resource path="res://Sounds/wind_ambient5.wav" type="AudioStream" id=13]
+[ext_resource path="res://Sounds/wind_ambient4.wav" type="AudioStream" id=14]
+[ext_resource path="res://Sounds/wind_ambient6.wav" type="AudioStream" id=15]
+
+[node name="Sounds" type="Node"]
+script = ExtResource( 7 )
+
+[node name="DevilDeath" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+
+[node name="Die" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+
+[node name="IntroMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+
+[node name="Hit" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+pitch_scale = 5.0
+
+[node name="ThrowCard" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+
+[node name="Win" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+
+[node name="DevilMeet" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+
+[node name="Strange1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+
+[node name="Strange2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
+
+[node name="Strange3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 12 )
+
+[node name="Strange4" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 11 )
+
+[node name="Strange5" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 14 )
+
+[node name="Strange6" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 13 )
+
+[node name="Strange7" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 15 )
+[connection signal="finished" from="DevilDeath" to="." method="_on_DevilDeath_finished"]
